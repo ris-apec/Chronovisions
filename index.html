@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>➜ Chronovisions</title>
+</head>
+<body>
+    
+    <section id="Navigation" class="Navigation">
+        <img class="logo" src="Images/BW Logo.png" width="110px">
+        <nav>
+            <ul class="nav_nav">
+                <a href="#Skibidi">Vision</a>
+                <a href="#FirstPage">Chronovisions</a>
+                <a href="#ThirdPage">About us</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Contact</button></a>
+    </section>
+    <hr style="margin-bottom: 200px;">
+
+    <a class="OneButton"><button>Scroll to get started ⏲ </button></a>
+
+
+    <section id="FirstPage" class="FirstPage">
+        <div class="Clock">
+            <img class="BackCog" src="Images/Page One/BackCog.png" style="width: 170px;height: 170px;transform: translateX(110px)translateY(480px);">
+            <img class="TopRightCog" src="Images/Page One/TopRightCog.png" style="width: 180px;height: 180px;transform: translateX(180px)translateY(240px);">
+            <img class="BackLeftCog" src="Images/Page One/BackLeftCog.png" style="width: 80px;height: 80px;transform: translateX(240px)translateY(480px);">
+            <img class="Clock2" src="Images/Page One/Clock2.png">
+            <img class="LeftCog" src="Images/Page One/LeftCog.png" style="width: 300px;height: 300px;transform: translateX(20px)translateY(320px);">
+            <img class="Handle" src="Images/Page One/Handle.png" style="width: 220px;height: 220px;transform: translateX(190px)translateY(550px);">
+            <img class="TopCog" src="Images/Page One/TopCog.png" style="width: 60px;height: 60px;transform: translateX(318px)translateY(222px);">
+            <img class="MainClock" src="Images/Page One/MainClock.png">
+            <img class="SmallHand" src="Images/Page One/SmallHand.png" style="width: 370px;height: 370px;transform: translateX(266px)translateY(243px);">
+            <img class="BigHand" src="Images/Page One/BigHand.png" style="width: 370px;height: 370px;transform: translateX(266px)translateY(243px);">
+        </div>
+
+        <div class="ClockText">
+            <p>Chronovisions</p>
+            <p class="Tagline">"Where every tick <br> powers imagination"</p>
+    </section>
+
+
+    <section id="SecondPage" class="SecondPage">
+        <div class="SideText" style="transform: translateX(-250px);">
+            <h1 id="Skibidi">Our Vision</h1>
+            <p> “Where every tick powers imagination” </p> 
+            <P>Chronovisions, we are a visionary brand that aims<br>to inspire and teach lessons to our audience.<br>We strive to power and create imaginative minds <br>to think outside of the box. </p>
+            <p> As a film and animation channel, we plan to create<br>animations which implement these lessons into our<br>videos. Not only providing lessons but as well as a <br> learning-entertainment environment for our audience.</p>
+        </div>
+        <div class="SideDes">
+            <img class="BlackBG" src="Images/Page2/BlackBG.png" style="width: 1300px;height: 1300px;transform: translateY(1774px) translateX(50px);">
+            <img class="Bunny" src="Images/Page2/Bunny.png" style="width: 1220px;transform: translateY(1888px) translateX(900px);">
+            <img class="BunnyEye" src="Images/Page2/BunnyEye.png" style="width: 1220px;transform: translateY(1880px) translateX(900px);">
+        </div>
+    </section>
+
+
+
+    <section id="ThirdPage" class="ThirdPage">
+        <h1>About us</h1>
+        <h2 style="font-size: 25px;">We are a group of students in APEC schools who created <br> this 'Chronovisions' project for our performance tasks.</h2>
+        <li>
+            <p>Gieanne Yvaughn Soriano - Group Facilitator</p>
+            <p>Christine Nadela - Spokesperson , Coder</p>
+            <p>Clarence Gabriel Rosales - Reseacher</p>
+            <p>Milliana Angeles - Researcher</p>
+            <p>Matthew Benedict Del Castillo - Researcher</p>
+        </li>
+    </section>
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="gsap-member/minified/gsap.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show1');
+    } else {
+        entry.target.classList.remove('show1');
+    }
+});
+});
+        
+const hiddenElements = document.querySelectorAll('.Clock');
+hiddenElements.forEach((el) => observer.observe(el));
+        document.addEventListener("DOMContentLoaded", (event) => {
+         gsap.registerPlugin(ScrollTrigger)
+    });
+
+
+
+    const observer2 = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show2');
+    } else {
+        entry.target.classList.remove('show2');
+    }
+});
+});
+        
+const hiddenElements2 = document.querySelectorAll('.ClockText');
+hiddenElements2.forEach((el) => observer.observe(el));
+        document.addEventListener("DOMContentLoaded", (event) => {
+         gsap.registerPlugin(ScrollTrigger)
+    });
+
+     gsap.to('.BigHand', {
+        rotation: 500,
+        duration: 20,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+
+    gsap.to('.SmallHand', {
+        rotation: 5000,
+        duration: 15,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+
+    gsap.to('.TopCog', {
+        rotation: 1000,
+        duration: 50,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+
+    gsap.to('.Handle', {
+        rotation: 1000,
+        duration: 50,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+
+    gsap.to('.BackLeftCog', {
+        rotation: 1000,
+        duration: 50,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+
+    gsap.to('.TopRightCog', {
+        rotation: 1000,
+        duration: 50,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+    gsap.to('.BackCog', {
+        rotation: 1000,
+        duration: 50,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+    gsap.to('.LeftCog', {
+        rotation: 1000,
+        duration: 50,
+        scrollTrigger: {
+            trigger: '.FirstPage',
+            scrub: true,
+    }
+    })
+    gsap.to('.Bunny', {
+        x: -170,
+        duration: 10,
+        scrollTrigger: {
+            trigger: '.BlackBG',
+            scrub: true,
+        }
+    })
+    gsap.to('.BunnyEye', {
+        x: -170,
+        duration: 10,
+        scrollTrigger: {
+            trigger: '.BlackBG',
+            scrub: true,
+        }
+    })
+    gsap.to('.SideText', {
+        x: 250,
+        duration: 10,
+        scrollTrigger: {
+            trigger: '.BlackBG',
+            scrub: true,
+        }
+    })
+
+    </script>
+
+</body>
+</html>

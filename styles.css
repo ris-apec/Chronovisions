@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Hawthorne;
+    src: url(Fonts/Hawthorne\ Vintage.otf);
+  }
+
+  @font-face {
+    font-family: Protique;
+    src: url(Fonts/Protique.ttf);
+  }
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow: -moz-hidden-unscrollable;
+}
+
+a {
+    font-family: protique;
+    font-weight: 500;
+    font-size: 25px;
+    color: #24252A;
+    text-decoration: none;
+    padding-left: 200px;
+    transition: all 500ms;
+}
+.nav_nav a:hover {
+    font-size: 30px;
+}
+.nav_nav a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.nav_nav a:hover::after {
+    width: 100%;
+}
+
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5x 25px 20px 25px;
+    margin: 0px 20px 0px 20px;
+}
+
+.nav_nav {
+    display: flex;
+}
+
+button {
+    font-family: Protique;
+    font-weight: 500;
+    font-size: 25px;
+    color: #9a9b9c;
+    background-color: rgb(24, 24, 24);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.OneButton {
+    text-align: center;
+    padding-left: 570px;
+}
+
+
+
+
+.FirstPage {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 500px 0px 0px 500px;
+    overflow: hidden;
+}
+.ClockText {
+    font-family: Protique;
+    font-size: 4em;
+    padding-right: 210px;
+    padding-top: 30px;
+    opacity: 0;
+    transition: all 3s;
+}
+.ClockText .Tagline {
+    margin-top: -60px;
+    font-size: 40px;
+}
+.Clock img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: min(800px, 90%);
+    transform: translateY(30%);
+    margin: 600px 0px 0px 80px;
+}
+
+.Clock {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show1 {
+    opacity: 1;
+}
+
+.show2 {
+    opacity: 1;
+}
+
+
+
+
+.SecondPage {
+    display: flex;
+    overflow: hidden;
+}
+.SideDes img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: min(800px, 90%);
+}
+
+.SideText {
+    font-family: Protique;
+    font-size: 30px;
+    margin-top: 800px;
+}
+
+
+
+
+.ThirdPage {
+    background-color: #000000;
+    top: 0;
+    margin-top: 57px;
+    font-family: Protique;
+    color: #ffffff;
+    padding: 100px 50px 50px 50px;
+    font-size: 30px;
+    overflow: hidden;
+}
